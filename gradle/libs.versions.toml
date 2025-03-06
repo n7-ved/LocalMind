@@ -1,0 +1,197 @@
+[versions]
+#Android Gradle Plugin
+android-gradle-plugin = "8.8.2"
+
+#Kotlin
+kotlin = "2.1.10"
+
+# Documentation
+dokka = "2.0.0-Beta"
+
+# UI Tools
+material = "1.12.0"
+
+# Multithreading
+kotlinx-coroutines = "1.9.0"
+
+# Network & Serialization
+okhttp = "4.12.0"
+retrofit = "2.11.0"
+ktor-bom = "3.1.1"
+kotlinx-serialization = "1.7.3"
+
+# Local - Datastore & Database
+datastore = "1.1.3"
+room = "2.6.1"
+
+# DI & Annotations
+dagger = "2.52"
+koin-bom = "4.0.2"
+koin-annotations-bom = "2.0.0"
+
+# Debug Tools
+leakcanary = "2.14"
+
+# Annotations procesing
+ksp = "2.1.0-1.0.29"
+
+# Firebase
+# https://firebase.google.com/support/release-notes/android
+firebase-bom = "33.10.0"
+firebase-crashlytics-gradle = "3.0.3"
+gms-googleServices = "4.4.2"
+
+# Logging
+slf4j = "2.0.17"
+
+androidxActivity = "1.10.1"
+androidxCore = "1.15.0"
+androidxLifecycle = "2.8.7"
+androidxComposeBom = "2025.02.00"
+appcompat = "1.7.0"
+
+
+[libraries]
+kotlin-bom = { group = "org.jetbrains.kotlin", name = "kotlin-bom", version.ref = "kotlin" }
+kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
+
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+# UI Tools
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
+androidx-lifecycle-viewModel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidxLifecycle" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewModel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Multithreading
+kotlinx-coroutines-bom = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-bom", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+
+# Network & Serialization
+okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttp" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-kotlinxSerialization = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit"}
+ktor-bom = { group = "io.ktor", name = "ktor-bom", version.ref = "ktor-bom" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core" }
+ktor-client-android = { group = "io.ktor", name = "ktor-client-android" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+# DI & Annotation
+# https://insert-koin.io/docs/setup/koin/
+dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger" }
+dagger-hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "dagger" }
+dagger-hilt-android-gradlePlugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
+koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin-bom"}
+koin-core = { group = "io.insert-koin", name = "koin-core" }
+koin-core-viewmodel = { group = "io.insert-koin", name = "koin-androidx-viewmodel"}
+koin-core-viewmodel-navigation = { group = "io.insert-koin", name = "koin-core-viewmodel-navigation"}
+koin-core-coroutines = { group = "io.insert-koin", name = "koin-core-coroutines"}
+koin-test = { group = "io.insert-koin", name = "koin-test" }
+koin-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4" }
+koin-test-junit5 = { group = "io.insert-koin", name = "koin-test-junit5" }
+koin-android = { group = "io.insert-koin", name = "koin-android" }
+koin-android-test = { group = "io.insert-koin", name = "koin-android-test" }
+koin-android-compat = { group = "io.insert-koin", name = "koin-android-compat" }
+koin-androidx-navigation = { group = "io.insert-koin", name = "koin-androidx-navigation" }
+koin-androidx-workmanager = { group = "io.insert-koin", name = "koin-androidx-workmanager" }
+koin-androidx-startup = { group = "io.insert-koin", name = "koin-androidx-startup" }
+koin-compose = { group = "io.insert-koin", name = "koin-compose" }
+koin-compose-viewmodel = { group = "io.insert-koin", name = "koin-androidx-compose-viewmodel"}
+koin-compose-viewmodel-navigation = { group = "io.insert-koin", name = "koin-compose-viewmodel-navigation"}
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose"}
+koin-androidx-compose-navigation = { group = "io.insert-koin", name = "koin-androidx-compose-navigation"}
+koin-ktor = { group = "io.insert-koin", name = "koin-ktor" }
+koin-logger-slf4j = { group = "io.insert-koin", name = "koin-logger-slf4j" }
+koin-annotations-bom = { group = "io.insert-koin", name = "koin-annotations-bom", version.ref = "koin-annotations-bom"}
+koin-annotations = { group = "io.insert-koin", name = "koin-annotations" }
+koin-ksp-compiler = { group = "io.insert-koin", name = "koin-ksp-compiler" }
+
+# Local DataStore & Database
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+
+# Firebase
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+
+# Debug Tools
+leakcanary = { group = "com.squareup.leakcanary", name = "leakcanary-android", version.ref = "leakcanary" }
+
+# Annotations procesing
+ksp = { module = "com.google.devtools.ksp:symbol-processing", version.ref = "ksp" }
+ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
+ksp-gradlePlugin = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+
+# Kotlin Documentation Generator
+dokka-documentation = { group = "org.jetbrains.dokka", name = "android-documentation-plugin", version.ref = "dokka" }
+
+# Logging
+slf4j-api = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
+
+
+[bundles]
+network-retrofit = [ "okhttp", "retrofit", "retrofit-converter-kotlinxSerialization" ]
+nwtwork-ktor = [ "ktor-client-core", "ktor-client-android", "ktor-serialization-kotlinx-json", "ktor-client-logging", "ktor-client-content-negotiation" ]
+
+
+
+[plugins]
+
+# Android Application - Gradle Plugin
+android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+
+# Android Library - Gradle Plugin
+android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+
+# Kotlin Android - Gradle Plugin
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+# Kotlin JVM - Gradle Plugin
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin"}
+
+# Dokka - Gradle Plugin
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+
+# Dagger Hilt - Gradle Plugin
+dagger-hilt-android = { id = "com.google.dagger.hilt.android" , version.ref = "dagger" }
+
+# Ktor - Gradle Plugin
+ktor = { id = "io.ktor.plugin", version.ref = "ktor-bom"}
+
+# Google Services - Gradle Plugin
+gms-googleServices = { id = "com.google.gms.google-services", version.ref = "gms-googleServices"}
+
+# Firebase Crashlytics - Gradle Plugin
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics-gradle"}
+
+# KSP (Kotlin Symbol Processing) Plugin - Lightweight Kotlin Compiler Plugin API
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+# Compose Compiler - Kotlin Compiler Plugin
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+# Kotlin Parcelize - Kotlin Compiler Plugin
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+
+# Kotlin Serialization - Kotlin Compiler Plugin
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
