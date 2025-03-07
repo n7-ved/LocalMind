@@ -49,6 +49,9 @@ androidxCore = "1.15.0"
 androidxLifecycle = "2.8.7"
 androidxComposeBom = "2025.02.00"
 appcompat = "1.7.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
 
 
 [libraries]
@@ -147,6 +150,9 @@ dokka-documentation = { group = "org.jetbrains.dokka", name = "android-documenta
 
 # Logging
 slf4j-api = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 
 
 [bundles]
