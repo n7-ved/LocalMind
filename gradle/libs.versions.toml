@@ -87,12 +87,14 @@ retrofit-converter-kotlinxSerialization = { group = "com.squareup.retrofit2", na
 retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit"}
 ktor-bom = { group = "io.ktor", name = "ktor-bom", version.ref = "ktor-bom" }
 ktor-client-core = { group = "io.ktor", name = "ktor-client-core" }
+ktor-client-auth = { group = "io.ktor", name = "ktor-client-auth"}
 ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp" }
 ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio"}
 ktor-client-android = { group = "io.ktor", name = "ktor-client-android" }
 ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json" }
 ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging" }
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation" }
+ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 # DI & Annotation
@@ -159,7 +161,7 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 
 [bundles]
 network-retrofit = [ "okhttp", "retrofit", "retrofit-converter-kotlinxSerialization" ]
-network-ktor = [ "ktor-client-core", "ktor-client-okhttp", "ktor-client-cio", "ktor-client-android", "ktor-serialization-kotlinx-json", "ktor-client-logging", "ktor-client-content-negotiation" ]
+network-ktor = [ "ktor-client-core", "ktor-client-auth", "ktor-client-okhttp", "ktor-client-cio", "ktor-client-android", "ktor-serialization-kotlinx-json", "ktor-client-logging", "ktor-client-content-negotiation", "ktor-client-mock" ]
 
 
 

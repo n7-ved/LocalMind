@@ -8,6 +8,8 @@ android {
     namespace = "com.n7.localmind.core.network"
     compileSdk = 35
 
+    buildFeatures.buildConfig = true
+
     defaultConfig {
         minSdk = 29
 
@@ -36,6 +38,7 @@ android {
 dependencies {
 
     implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.auth)
     implementation(libs.ktor.client.okhttp)
     implementation(libs.ktor.client.cio)
     implementation(libs.ktor.client.android)
