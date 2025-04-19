@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test_open_ai_base_url_v1">https://api.openai.com/v1</string>
+</resources>
