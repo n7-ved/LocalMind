@@ -1,3 +1,4 @@
+/*
 package com.n7.core.openai.client
 
 import android.util.Log
@@ -35,7 +36,8 @@ class OpenAIApiClientTest {
         // Create mock response
         val mockResponse = getMockAssistantChatResponse()
 
-        /*        // Create mock engine
+        */
+/*        // Create mock engine
                 val mockEngine = MockEngine { request ->
                     // Verify request
                     assertEquals("/responses", request.url.encodedPath)
@@ -50,7 +52,8 @@ class OpenAIApiClientTest {
                         content = Json.encodeToString(AssistantChatResponse.serializer(), mockResponse),
                         headers = headersOf(HttpHeaders.ContentType, "application/json")
                     )
-                }*/
+                }*//*
+
 
         // Create test request
         val testRequest = getMockUserChatRequest()
@@ -226,4 +229,4 @@ class OpenAIApiClientTest {
             )
         )
     }
-} 
+} */

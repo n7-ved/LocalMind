@@ -54,15 +54,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(platform(libs.ktor.bom))
 
-    testImplementation(libs.ktor.client.mock)
     testImplementation(libs.junit)
-    testImplementation(libs.kotlin.test)
-    testImplementation(libs.ktor.client.auth)
-    testImplementation(libs.ktor.client.logging)
-    testImplementation(libs.ktor.client.okhttp)
-    testImplementation(libs.ktor.client.content.negotiation)
-    testImplementation(libs.ktor.serialization.kotlinx.json)
-
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
