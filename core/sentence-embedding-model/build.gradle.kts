@@ -12,6 +12,11 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+
+        // Enable ONNX Runtime
+        ndk {
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+        }
     }
 
     buildTypes {
@@ -34,5 +39,15 @@ android {
 
 dependencies {
 
-    implementation(project(":core:inference-engine"))
+    // ONNX Runtime
+    implementation(libs.onnxruntime.android)
+
+    implementation(libs.google.gson)
+
+    implementation(libs.kotlinx.coroutines.android)
+
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
