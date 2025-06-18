@@ -34,5 +34,4 @@ android {
 
 dependencies {
 
-    implementation(project(":core:inference-engine"))
 }
