@@ -1,0 +1,170 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7056931989612293507",
+      "lastPropertyId": "9:8707392213344303109",
+      "name": "Document",
+      "properties": [
+        {
+          "id": "2:3093680500104426048",
+          "name": "documentId",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "7:2876849354499337865",
+          "name": "documentData",
+          "type": 9
+        },
+        {
+          "id": "8:1592015929380216961",
+          "name": "documentName",
+          "type": 9
+        },
+        {
+          "id": "9:8707392213344303109",
+          "name": "documentTimestamp",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:8125698119967069365",
+      "lastPropertyId": "12:7863295789718028846",
+      "name": "DocumentChunk",
+      "properties": [
+        {
+          "id": "8:5048121423125718040",
+          "name": "documentChunkId",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "9:50477645518772538",
+          "name": "parentDocumentId",
+          "indexId": "5:4825265900884644916",
+          "type": 6,
+          "flags": 8
+        },
+        {
+          "id": "10:2571526804889885145",
+          "name": "parentDocumentName",
+          "type": 9
+        },
+        {
+          "id": "11:7521290247049948088",
+          "name": "documentChunkData",
+          "type": 9
+        },
+        {
+          "id": "12:7863295789718028846",
+          "name": "documentChunkEmbeddings",
+          "indexId": "6:8034045435034780838",
+          "type": 28,
+          "flags": 8
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:2596990041958234441",
+      "lastPropertyId": "4:91543815515441932",
+      "name": "PerformanceDocument",
+      "properties": [
+        {
+          "id": "1:2670723880740149668",
+          "name": "documentId",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7029432683184712144",
+          "name": "documentData",
+          "type": 9
+        },
+        {
+          "id": "3:4955639440890910042",
+          "name": "documentName",
+          "type": 9
+        },
+        {
+          "id": "4:91543815515441932",
+          "name": "documentTimestamp",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:6541586850638255673",
+      "lastPropertyId": "5:6313200949478633034",
+      "name": "PerformanceDocumentChunk",
+      "properties": [
+        {
+          "id": "1:2238600047390596855",
+          "name": "documentChunkId",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2636138174700421608",
+          "name": "parentDocumentId",
+          "indexId": "7:2859070966247671236",
+          "type": 6,
+          "flags": 8
+        },
+        {
+          "id": "3:9141255872199433401",
+          "name": "parentDocumentName",
+          "type": 9
+        },
+        {
+          "id": "4:6074076277497256414",
+          "name": "documentChunkData",
+          "type": 9
+        },
+        {
+          "id": "5:6313200949478633034",
+          "name": "documentChunkEmbeddings",
+          "indexId": "8:7710705253574802333",
+          "type": 28,
+          "flags": 8
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:6541586850638255673",
+  "lastIndexId": "8:7710705253574802333",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [
+    4844833215600568302,
+    4916601799299203657,
+    7217617921678705183,
+    8829638220143280082
+  ],
+  "retiredPropertyUids": [
+    4087074507998903085,
+    8439479120529087448,
+    6270262051048967387,
+    5526030698032064663,
+    5595272036410785888,
+    3259677945602110025,
+    2374701296007645367,
+    8780145210499922222,
+    7447239714179555176,
+    9095127232311725332,
+    4933943795982561053,
+    4597402926035143787
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

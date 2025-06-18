@@ -3,8 +3,10 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 
+apply(plugin = "io.objectbox")
+
 android {
-    namespace = "com.n7.localmind.ui.main"
+    namespace = "com.n7.localmind.core.vector.db"
     compileSdk = 35
 
     defaultConfig {
@@ -13,6 +15,8 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
+
+    buildFeatures.buildConfig = true
 
     buildTypes {
         release {
@@ -34,10 +38,10 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation(libs.objectbox.android)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
