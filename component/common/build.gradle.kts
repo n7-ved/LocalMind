@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.inference.engine"
+    namespace = "com.n7.localmind.component.common"
     compileSdk = 35
 
     defaultConfig {
@@ -30,8 +30,4 @@ android {
     kotlinOptions {
         jvmTarget = "21"
     }
-}
-
-dependencies {
-
 }
