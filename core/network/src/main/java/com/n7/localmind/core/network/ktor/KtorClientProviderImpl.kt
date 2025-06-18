@@ -23,8 +23,8 @@ import kotlinx.serialization.json.Json
 
 object KtorClientProviderImpl : KtorClientProvider {
 
-    private val _httpClientEngineCache = mutableMapOf<ClientEngineConfig, HttpClientEngine>()
-    private val _httpClientCache = mutableMapOf<KtorClientConfig, HttpClient>()
+     val _httpClientEngineCache = mutableMapOf<ClientEngineConfig, HttpClientEngine>()
+     val _httpClientCache = mutableMapOf<KtorClientConfig, HttpClient>()
 
     override fun getOrCreateHttpEngine(clientEngineConfig: ClientEngineConfig): HttpClientEngine{
 
@@ -83,7 +83,9 @@ object KtorClientProviderImpl : KtorClientProvider {
 
                     install(plugin = ResponseObserver, configure = {
                         onResponse { response ->
-                            Log.d("Ktor | HTTP status:", "${response.status.value}")
+                            if (BuildConfig.DEBUG) {
+                                Log.d("Nick-Ktor-ResponseObserver-Plugin", "HTTP status: ${response.status.value}")
+                            }
                         }
                     })
 
@@ -91,7 +93,7 @@ object KtorClientProviderImpl : KtorClientProvider {
                         logger = object : Logger {
                             override fun log(message: String) {
                                 if (BuildConfig.DEBUG) {
-                                    Log.d("KtorLogger", "[Ktor] → $message")
+                                    Log.d("Nick-Ktor-Logging-Plugin", "Message: $message")
                                 }
                             }
                         }

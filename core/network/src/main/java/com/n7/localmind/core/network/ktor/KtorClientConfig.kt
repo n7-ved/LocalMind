@@ -3,7 +3,7 @@ package com.n7.localmind.core.network.ktor
 data class KtorClientConfig(
     val engine: ClientEngineConfig = ClientEngineConfig.OkHttp,
     val auth: ClientAuthConfig = ClientAuthConfig.None,
-    val networkTimeOut: Long = 5_000L,
+    val networkTimeOut: Long = 20_000L,
     val baseUrl: String = "",
 )
 
