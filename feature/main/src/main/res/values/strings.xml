@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_remote_gpt">Chat</string>
+    <string name="nav_document_local_rag">Document</string>
+    <string name="nav_performance_local_rag">Performance</string>
+</resources>
