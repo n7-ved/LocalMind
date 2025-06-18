@@ -11,6 +11,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -33,11 +34,13 @@ include(":component:remote-claude")
 include(":component:remote-gemini")
 include(":core:local-db")
 include(":core:cache")
-include(":ui:chat")
-include(":ui:chat-local-rag-local-llm")
-include(":ui:chat-local-llm")
-include(":ui:chat-remote-gpt")
-include(":ui:chat-local-rag-remote-gpt")
-include(":ui:main")
-include(":ui:onboarding")
 include(":core:openai-client")
+include(":component:common")
+include(":core:vector-db")
+include(":feature:document-local-rag")
+include(":core:design-system")
+include(":feature:main")
+include(":feature:remote-gpt")
+include(":feature:onboarding")
+include(":feature:performance-local-rag")
+include(":core:common")

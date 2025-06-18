@@ -1,9 +1,9 @@
 [versions]
 #Android Gradle Plugin
-android-gradle-plugin = "8.9.1"
+android-gradle-plugin = "8.9.2"
 
 #Kotlin
-kotlin = "2.1.10"
+kotlin = "2.1.20"
 
 # Documentation
 dokka = "2.0.0-Beta"
@@ -12,17 +12,21 @@ dokka = "2.0.0-Beta"
 material = "1.12.0"
 
 # Multithreading
-kotlinx-coroutines = "1.10.1"
+kotlinx-coroutines = "1.10.2"
 
 # Network & Serialization
 okhttp = "4.12.0"
 retrofit = "2.11.0"
-ktor-bom = "3.1.1"
-kotlinx-serialization = "1.8.0"
+ktor-bom = "3.1.2"
+kotlinx-serialization = "1.8.1"
 
 # Local - Datastore & Database
-datastore = "1.1.4"
-room = "2.7.0"
+# https://issuetracker.google.com/issues/413061399
+datastore = "1.2.0-alpha01"
+room = "2.7.1"
+
+# Local - Vector Database
+objectbox = "4.2.0"
 
 # DI & Annotations
 dagger = "2.54"
@@ -32,26 +36,38 @@ koin-annotations-bom = "2.0.0"
 # Debug Tools
 leakcanary = "2.14"
 
+# OnnxRuntime
+onnxruntimeAndroid = "1.21.1"
+
 # Annotations procesing
 ksp = "2.1.0-1.0.29"
 
 # Firebase
 # https://firebase.google.com/support/release-notes/android
-firebase-bom = "33.12.0"
+firebase-bom = "33.13.0"
 firebase-crashlytics-gradle = "3.0.3"
 gms-googleServices = "4.4.2"
 
 # Logging
 slf4j = "2.0.17"
 
+# PDF Reader
+itextpdf = "5.5.13.4"
+
+# Navigation
+navigation-compose = "2.8.9"
+
+googleGson = "2.13.0"
+
 androidxActivity = "1.10.1"
 androidxCore = "1.16.0"
 androidxLifecycle = "2.8.7"
-androidxComposeBom = "2025.04.00"
+androidxComposeBom = "2025.04.01"
 appcompat = "1.7.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
+kotlin-compiler-extension = "1.5.4"
 
 
 [libraries]
@@ -59,25 +75,31 @@ kotlin-bom = { group = "org.jetbrains.kotlin", name = "kotlin-bom", version.ref 
 kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
 
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
-
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
 # UI Tools
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-runtime-android = { group = "androidx.compose.runtime", name = "runtime-android"}
+
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
 androidx-lifecycle-viewModel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidxLifecycle" }
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
 androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
 androidx-lifecycle-viewModel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
-# Multithreading
+# Concurrency
 kotlinx-coroutines-bom = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-bom", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+
+# Onnxruntime
+onnxruntime-android = { module = "com.microsoft.onnxruntime:onnxruntime-android", version.ref = "onnxruntimeAndroid" }
+
 
 # Network & Serialization
 okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttp" }
@@ -96,6 +118,7 @@ ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging" }
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation" }
 ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+google-gson = { group = "com.google.code.gson", name = "gson", version.ref = "googleGson"}
 
 # DI & Annotation
 # https://insert-koin.io/docs/setup/koin/
@@ -136,6 +159,11 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
 
+# Local - Vector Database
+objectbox-gradle-plugin = { group = "io.objectbox", name = "objectbox-gradle-plugin", version.ref = "objectbox" }
+objectbox-android = { group = "io.objectbox", name = "objectbox-android", version.ref = "objectbox"}
+# objectbox-android-objectbrowser = { group = "io.objectbox", name = "objectbox-android-objectbrowser", version.ref = "objectbox"}
+
 # Firebase
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
@@ -159,6 +187,11 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 
+# Navigation
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation-compose" }
+
+# PDF Reader
+itextpdf = { group = "com.itextpdf", name = "itextpdf", version.ref = "itextpdf" }
 
 [bundles]
 network-retrofit = [ "okhttp", "retrofit", "retrofit-converter-kotlinxSerialization" ]
@@ -194,6 +227,8 @@ gms-googleServices = { id = "com.google.gms.google-services", version.ref = "gms
 
 # Firebase Crashlytics - Gradle Plugin
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics-gradle"}
+
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 
 # KSP (Kotlin Symbol Processing) Plugin - Lightweight Kotlin Compiler Plugin API
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
