@@ -1,8 +1,7 @@
-package com.n7.localmind.ui.onboarding
+package com.n7.localmind.design.system
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-
-import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
